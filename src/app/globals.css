@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1B91B2;
+  --color-primary-hover: #157a96;
+  --color-primary-dark: #014B60;
+  --color-body: #2B2B2B;
+  --color-light-bg: #F9F9F9;
+  --color-white: #FFFFFF;
+
+  --font-serif: "PT Serif", serif;
+  --font-condensed: "Roboto Condensed", sans-serif;
+}
+
+body {
+  color: var(--color-body);
+  font-family: var(--font-serif);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-condensed);
+}
