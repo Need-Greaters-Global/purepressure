@@ -39,7 +39,7 @@ export default function GutterBasketPage() {
           </p>
         </>
       }
-      detailImage="/images/services/gutter-basket.jpg"
+      detailImage="/images/services/gutter-basket-side.png"
       faqs={[
         {
           question: "Does the Gutter Basket come with a NO CLOG guarantee?",

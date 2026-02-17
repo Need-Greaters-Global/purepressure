@@ -41,7 +41,7 @@ export default function PressureWashingPage() {
           </p>
         </>
       }
-      detailImage="/images/services/pressure-washing.jpg"
+      detailImage="/images/services/pressure-washing-side.png"
       faqs={[
         {
           question: "Do you use hot and cold water?",

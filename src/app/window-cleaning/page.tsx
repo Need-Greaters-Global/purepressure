@@ -43,7 +43,7 @@ export default function WindowCleaningPage() {
           </p>
         </>
       }
-      detailImage="/images/services/window-cleaning.jpg"
+      detailImage="/images/services/window-cleaning-side.png"
       faqs={[
         {
           question: "Why should I choose squeegee cleaning?",

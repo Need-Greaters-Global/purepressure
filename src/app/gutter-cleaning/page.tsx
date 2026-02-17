@@ -41,7 +41,7 @@ export default function GutterCleaningPage() {
           </p>
         </>
       }
-      detailImage="/images/services/gutter-cleaning.jpg"
+      detailImage="/images/services/gutter-cleaning-side.png"
       faqs={[
         {
           question: "Will you make a mess?",
