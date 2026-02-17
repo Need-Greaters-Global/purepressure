@@ -14,7 +14,6 @@
     "embla-carousel-react": "^8",
     "embla-carousel-autoplay": "^8",
     "gray-matter": "^4",
-    "next-mdx-remote": "^5",
     "lucide-react": "^0.400",
     "clsx": "^2"
   },
