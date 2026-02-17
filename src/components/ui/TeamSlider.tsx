@@ -25,17 +25,17 @@ export function TeamSlider() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative mx-auto max-w-2xl">
+    <div className="relative mx-auto max-w-2xl px-8 md:px-0">
       {/* Arrows */}
       <button
-        className="absolute -left-4 top-1/3 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40"
+        className="absolute left-0 top-1/3 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40 md:-left-4"
         onClick={() => emblaApi?.scrollPrev()}
         aria-label="Previous team member"
       >
         <ChevronLeft size={24} />
       </button>
       <button
-        className="absolute -right-4 top-1/3 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40"
+        className="absolute right-0 top-1/3 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40 md:-right-4"
         onClick={() => emblaApi?.scrollNext()}
         aria-label="Next team member"
       >
@@ -76,14 +76,16 @@ export function TeamSlider() {
         {teamMembers.map((_, i) => (
           <button
             key={i}
-            className={`h-2.5 w-2.5 rounded-full transition-colors ${
+            className="flex h-8 w-8 items-center justify-center"
+            onClick={() => emblaApi?.scrollTo(i)}
+            aria-label={`View ${teamMembers[i].name}`}
+          >
+            <span className={`block h-2.5 w-2.5 rounded-full transition-colors ${
               i === selectedIndex
                 ? "bg-white"
                 : "bg-white/30 hover:bg-white/50"
-            }`}
-            onClick={() => emblaApi?.scrollTo(i)}
-            aria-label={`View ${teamMembers[i].name}`}
-          />
+            }`} />
+          </button>
         ))}
       </div>
     </div>

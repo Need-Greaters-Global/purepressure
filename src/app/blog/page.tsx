@@ -83,7 +83,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                   <li key={cat.slug}>
                     <Link
                       href={`/blog?category=${cat.slug}`}
-                      className={`block text-sm transition-colors hover:text-[var(--color-primary)] ${
+                      className={`block py-2 text-sm transition-colors hover:text-[var(--color-primary)] ${
                         category === cat.slug
                           ? "font-bold text-[var(--color-primary)]"
                           : "text-gray-600"

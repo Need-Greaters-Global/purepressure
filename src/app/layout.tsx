@@ -26,6 +26,10 @@ export const metadata: Metadata = {
   description:
     "Professional gutter cleaning, pressure washing, brush washing, and window cleaning services in Vancouver, Coquitlam, Maple Ridge, Surrey, Langley and the Fraser Valley.",
   metadataBase: new URL("https://purepressure.ca"),
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "en_CA",

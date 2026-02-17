@@ -38,10 +38,10 @@ export function ServicesSlider() {
       style={{ backgroundImage: "url('/images/teasersBgr.jpg')" }}
     >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="relative">
+        <div className="relative px-8 md:px-0">
           {/* Arrows */}
           <button
-            className="absolute -left-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40 disabled:opacity-30"
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40 disabled:opacity-30 md:-left-4"
             onClick={() => emblaApi?.scrollPrev()}
             disabled={!canScrollPrev}
             aria-label="Previous services"
@@ -49,7 +49,7 @@ export function ServicesSlider() {
             <ChevronLeft size={24} />
           </button>
           <button
-            className="absolute -right-4 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40 disabled:opacity-30"
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white/40 disabled:opacity-30 md:-right-4"
             onClick={() => emblaApi?.scrollNext()}
             disabled={!canScrollNext}
             aria-label="Next services"
@@ -80,14 +80,16 @@ export function ServicesSlider() {
             {services.map((_, i) => (
               <button
                 key={i}
-                className={`h-2.5 w-2.5 rounded-full transition-colors ${
+                className="flex h-8 w-8 items-center justify-center"
+                onClick={() => emblaApi?.scrollTo(i)}
+                aria-label={`Go to service ${i + 1}`}
+              >
+                <span className={`block h-2.5 w-2.5 rounded-full transition-colors ${
                   i === selectedIndex
                     ? "bg-white"
                     : "bg-white/30 hover:bg-white/50"
-                }`}
-                onClick={() => emblaApi?.scrollTo(i)}
-                aria-label={`Go to service ${i + 1}`}
-              />
+                }`} />
+              </button>
             ))}
           </div>
         </div>

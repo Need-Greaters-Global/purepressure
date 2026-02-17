@@ -31,7 +31,7 @@ export default function ContactPage() {
             <iframe
               src={siteConfig.contactFormUrl}
               title="Pure Pressure Estimate Request Form"
-              className="h-[800px] w-full border-0"
+              className="h-[600px] w-full border-0 sm:h-[800px]"
               allowFullScreen
             />
             <div className="mt-8 border-t border-gray-200 pt-8 text-center">

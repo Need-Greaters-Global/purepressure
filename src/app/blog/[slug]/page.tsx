@@ -150,7 +150,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
               {/* Blog Content */}
               <div
-                className="prose prose-lg max-w-none leading-relaxed text-gray-700 [&_h2]:mb-4 [&_h2]:mt-8 [&_h2]:font-[family-name:var(--font-roboto-condensed)] [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-[var(--color-primary-dark)] [&_h3]:mb-3 [&_h3]:mt-6 [&_h3]:font-[family-name:var(--font-roboto-condensed)] [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-[var(--color-primary-dark)] [&_img]:my-6 [&_img]:rounded [&_img]:shadow-md [&_li]:mb-1 [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6"
+                className="prose prose-lg max-w-none leading-relaxed text-gray-700 [&_h2]:mb-4 [&_h2]:mt-8 [&_h2]:font-[family-name:var(--font-roboto-condensed)] [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-[var(--color-primary-dark)] [&_h3]:mb-3 [&_h3]:mt-6 [&_h3]:font-[family-name:var(--font-roboto-condensed)] [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-[var(--color-primary-dark)] [&_img]:my-6 [&_img]:max-w-full [&_img]:h-auto [&_img]:rounded [&_img]:shadow-md [&_li]:mb-1 [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6"
                 dangerouslySetInnerHTML={{ __html: contentHtml }}
               />
 
@@ -178,7 +178,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <li key={cat.slug}>
                       <Link
                         href={`/blog?category=${cat.slug}`}
-                        className={`block text-sm transition-colors hover:text-[var(--color-primary)] ${
+                        className={`block py-2 text-sm transition-colors hover:text-[var(--color-primary)] ${
                           post.categories.includes(cat.slug)
                             ? "font-bold text-[var(--color-primary)]"
                             : "text-gray-600"

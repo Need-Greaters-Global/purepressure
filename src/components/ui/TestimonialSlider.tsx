@@ -33,10 +33,10 @@ export function TestimonialSlider() {
     >
       <div className="mx-auto max-w-4xl px-4">
         <h2
-          className="mx-auto mb-10 w-fit bg-center bg-no-repeat px-12 py-4 text-center font-[family-name:var(--font-roboto-condensed)] text-2xl font-bold uppercase tracking-wide text-white md:text-3xl"
+          className="mx-auto mb-10 w-fit bg-center bg-no-repeat px-6 py-3 text-center font-[family-name:var(--font-roboto-condensed)] text-xl font-bold uppercase tracking-wide text-white md:px-12 md:py-4 md:text-3xl"
           style={{
             backgroundImage: "url('/images/testimonialsTitleBgr.png')",
-            backgroundSize: "contain",
+            backgroundSize: "100% 100%",
           }}
         >
           What Our Clients Say
@@ -72,14 +72,16 @@ export function TestimonialSlider() {
           {testimonials.map((_, i) => (
             <button
               key={i}
-              className={`h-2.5 w-2.5 rounded-full transition-colors ${
+              className="flex h-8 w-8 items-center justify-center"
+              onClick={() => emblaApi?.scrollTo(i)}
+              aria-label={`Go to testimonial ${i + 1}`}
+            >
+              <span className={`block h-2.5 w-2.5 rounded-full transition-colors ${
                 i === selectedIndex
                   ? "bg-[var(--color-primary)]"
                   : "bg-gray-300 hover:bg-gray-400"
-              }`}
-              onClick={() => emblaApi?.scrollTo(i)}
-              aria-label={`Go to testimonial ${i + 1}`}
-            />
+              }`} />
+            </button>
           ))}
         </div>
       </div>

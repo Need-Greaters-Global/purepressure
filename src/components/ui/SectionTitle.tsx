@@ -19,12 +19,12 @@ export function SectionTitle({
   return (
     <h2
       className={cn(
-        "mx-auto mb-8 w-fit bg-center bg-no-repeat px-12 py-4 text-center font-[family-name:var(--font-roboto-condensed)] text-2xl font-bold uppercase tracking-wide text-white md:text-3xl",
+        "mx-auto mb-8 w-fit bg-center bg-no-repeat px-6 py-3 text-center font-[family-name:var(--font-roboto-condensed)] text-xl font-bold uppercase tracking-wide text-white md:px-12 md:py-4 md:text-2xl lg:text-3xl",
         className,
       )}
       style={{
         backgroundImage: `url('${bgImage}')`,
-        backgroundSize: "contain",
+        backgroundSize: "100% 100%",
       }}
     >
       {title}

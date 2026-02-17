@@ -23,17 +23,17 @@ export function BlogCard({
 }: BlogCardProps) {
   if (layout === "horizontal") {
     return (
-      <article className="flex gap-5">
-        <div className="relative h-40 w-48 shrink-0 overflow-hidden rounded">
+      <article className="flex flex-col gap-4 sm:flex-row sm:gap-5">
+        <div className="relative h-48 w-full overflow-hidden rounded sm:h-40 sm:w-48 sm:shrink-0">
           <Image
             src={featuredImage}
             alt={title}
             fill
             className="object-cover"
-            sizes="200px"
+            sizes="(max-width: 640px) 100vw, 200px"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex min-w-0 flex-col">
           <Link
             href={`/blog/${slug}`}
             className="mb-2 font-[family-name:var(--font-roboto-condensed)] text-lg font-bold text-[var(--color-primary)] transition-colors hover:text-[var(--color-primary-hover)]"
